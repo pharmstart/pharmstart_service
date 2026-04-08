@@ -44,126 +44,107 @@
                 <input type="text" name="pharmacy_name" placeholder="운영 중이신 약국 이름을 입력해주세요" required>
             </div>
 
-                    <div class="privacy-section">
-    <div class="privacy-box">
-        <div class="privacy-item">
-            <p class="privacy-title">개인정보 수집 및 이용 동의 (필수)</p>
-            <div class="privacy-content">
-                수집 업체 : 데일리팜<br>
-                수집 목적 : SNS 온라인 대행 6개월 패키지 상담 정보 제공<br>
-                수집 항목 : 성명/약국명/연락처<br>
-                보관 기간 : 신청 후 1년
-            </div>
-            <label class="checkbox-label">
-                <input type="checkbox" name="agreement_1" required>
-                <span>동의합니다</span>
-            </label>
+<div class="privacy-section">
+    <div class="privacy-item">
+        <p class="privacy-title">개인정보 수집 및 이용 동의 (필수)</p>
+        <div class="privacy-box">
+            수집 업체 : 데일리팜<br>
+            수집 목적 : SNS 온라인 대행 6개월 패키지 상담 정보 제공<br>
+            수집 항목 : 성명/약국명/연락처<br>
+            보관 기간 : 신청 후 1년
         </div>
-
-        <div class="privacy-item">
-            <p class="privacy-title">개인정보 제3자 제공 동의 (필수)</p>
-            <div class="privacy-content">
-                제공받는 자 : 킹메이커<br>
-                이용 목적 : SNS 온라인 대행 운영 및 서비스 광고 및 마케팅<br>
-                수집 항목 : 성명/약국명/연락처<br>
-                보유 및 이용 기간 : 목적 달성 시까지 (관련 법령에 따라 보관 후 삭제)
-            </div>
-            <label class="checkbox-label">
-                <input type="checkbox" name="agreement_2" required>
-                <span>동의합니다</span>
-            </label>
-        </div>
+        <label class="checkbox-container">
+            <input type="checkbox" name="agreement_1" required>
+            <span class="checkmark"></span>
+            동의합니다
+        </label>
     </div>
+
+    <div class="privacy-item">
+        <p class="privacy-title">개인정보 제3자 제공 동의 (필수)</p>
+        <div class="privacy-box">
+            제공받는 자 : 킹메이커<br>
+            이용 목적 : SNS 온라인 대행 운영 및 서비스 광고 및 마케팅<br>
+            수집 항목 : 성명/약국명/연락처<br>
+            보유 및 이용 기간 : 목적 달성 시까지 (관련 법령에 따라 보관 후 삭제)
+        </div>
+        <label class="checkbox-container">
+            <input type="checkbox" name="agreement_2" required>
+            <span class="checkmark"></span>
+            동의합니다
+        </label>
+    </div>
+
+    <p class="warning-text">※ 미동의 시 상담 및 이벤트 혜택 수령이 불가능합니다.</p>
 </div>
 
-            <button type="submit">할인 혜택 받고 신청하기</button>
+            <button type="submit"> 무료 상담하고 혜택 받기</button>
             <p class="form-footer">정보는 서비스 안내 및 상담 목적으로만 사용됩니다.</p>
         </form>
     </div>
 </div>
 
 <style>
-    /* 전체 배경 및 폰트 설정 */
-    .form-section { 
-        padding: 100px 20px; 
-        background-color: #f0f4f4; /* 연한 민트/그레이 톤 */
-        font-family: 'Pretendard', -apple-system, sans-serif;
-    }
+.privacy-section {
+    margin: 30px 0;
+    text-align: left; /* 전체 왼쪽 정렬로 고정 */
+}
 
-    .form-card { 
-        max-width: 550px; 
-        margin: 0 auto; 
-        background: #ffffff; 
-        padding: 50px 40px; 
-        border-radius: 24px; 
-        box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
-    }
+.privacy-item {
+    margin-bottom: 25px;
+}
 
-    .form-header { margin-bottom: 40px; text-align: center; }
-    .form-header h2 { font-size: 28px; color: #1a1a1a; margin-bottom: 12px; }
-    .benefit-notice { 
-        display: inline-block;
-        background: #e0f2f1; 
-        color: #00796b; 
-        padding: 10px 20px; 
-        border-radius: 50px; 
-        font-size: 15px;
-    }
+.privacy-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
 
-    .input-group { text-align: left; margin-bottom: 24px; }
-    .input-group label { 
-        display: block; 
-        font-size: 15px; 
-        font-weight: 600; 
-        margin-bottom: 8px; 
-        color: #333; 
-    }
+.privacy-box {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+    text-align: left; /* 박스 안 텍스트 왼쪽 정렬 */
+    margin-bottom: 12px;
+}
 
-    input, textarea { 
-        width: 100%; 
-        padding: 14px 16px; 
-        border: 1px solid #e0e0e0; 
-        border-radius: 12px; 
-        font-size: 16px; 
-        transition: all 0.2s;
-        background: #fafafa;
-    }
+/* 체크박스 커스텀 디자인 */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+    padding-left: 5px;
+}
 
-    input:focus, textarea:focus { 
-        outline: none; 
-        border-color: #00bfa5; 
-        background: #ffffff;
-        box-shadow: 0 0 0 4px rgba(0, 191, 165, 0.1);
-    }
+.checkbox-container input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: #00bfa5; /* 체크박스 포인트 컬러 */
+    cursor: pointer;
+}
 
-    textarea { height: 120px; resize: vertical; }
+.warning-text {
+    font-size: 13px;
+    color: #e53935; /* 경고 레드 컬러 */
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+}
 
-    button { 
-        width: 100%; 
-        padding: 18px; 
-        background: #00bfa5; /* 팜스타트 민트 포인트 */
-        color: white; 
-        border: none; 
-        border-radius: 12px; 
-        font-size: 18px; 
-        font-weight: bold; 
-        cursor: pointer; 
-        transition: 0.3s;
-        margin-top: 10px;
-    }
-
-    button:hover { 
-        background: #008e7a; 
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 191, 165, 0.3);
-    }
-
-    .form-footer { 
-        font-size: 13px; 
-        color: #999; 
-        margin-top: 20px; 
-        text-align: center; 
-    }
+/* 제출 버튼 상단 여백 조절 */
+button[type="submit"] {
+    margin-top: 10px;
+}
 
     /* 모바일 대응 */
     @media (max-width: 480px) {
