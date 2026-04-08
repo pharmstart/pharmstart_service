@@ -21,53 +21,159 @@
         <img src="main_01.png" alt="팜스타트 소개 01">
         <img src="main_02.png" alt="팜스타트 소개 02">
         
-        <div class="form-section">
-            <h2>팜스타트 서비스 신청하기</h2>
-            <p>6개월 패키지 할인 혜택을 놓치지 마세요!</p>
 <div class="form-section">
     <div class="form-card">
-        <h2>팜스타트 서비스 신청</h2>
-        <p class="benefit-tag">🎁 6개월 패키지 신청 시 20만원 할인 혜택!</p>
+        <div class="form-header">
+            <h2>팜스타트 서비스 신청</h2>
+            <p class="benefit-notice">✨ 현재 6개월 패키지 신청 시 <b>20만원 이상 절감 혜택</b> 제공 중!</p>
+        </div>
         
-        <form action="https://formspree.io/f/mvzvyqqb" method="POST">
+        <form action="https://formspree.io/f/여기에_주소를_넣으세요" method="POST">
             <div class="input-group">
-                <label>성함</label>
-                <input type="text" name="name" placeholder="성함을 입력해주세요" required>
+                <label>성함 *</label>
+                <input type="text" name="name" placeholder="실명을 입력해주세요" required>
             </div>
+
             <div class="input-group">
-                <label>연락처</label>
+                <label>연락처 *</label>
                 <input type="tel" name="phone" placeholder="010-0000-0000" required>
             </div>
+
             <div class="input-group">
-                <label>문의 사항</label>
-                <textarea name="message" placeholder="궁금하신 내용을 적어주세요"></textarea>
+                <label>약국명 *</label>
+                <input type="text" name="pharmacy_name" placeholder="운영 중이신 약국 이름을 입력해주세요" required>
             </div>
-            <button type="submit">지금 바로 신청하기</button>
+
+            <div class="input-group">
+                <label>신청 동기 및 궁금한 점</label>
+                <textarea name="message" placeholder="팜스타트와 함께하고 싶은 이유나 궁금하신 점을 자유롭게 적어주세요"></textarea>
+            </div>
+            <div class="privacy-section">
+    <div class="privacy-box">
+        <div class="privacy-item">
+            <p class="privacy-title">개인정보 수집 및 이용 동의 (필수)</p>
+            <div class="privacy-content">
+                수집 업체 : 데일리팜<br>
+                수집 목적 : SNS 온라인 대행 6개월 패키지 상담 정보 제공<br>
+                수집 항목 : 성명/약국명/연락처<br>
+                보관 기간 : 신청 후 1년
+            </div>
+            <label class="checkbox-label">
+                <input type="checkbox" name="agreement_1" required>
+                <span>동의합니다</span>
+            </label>
+        </div>
+
+        <div class="privacy-item">
+            <p class="privacy-title">개인정보 제3자 제공 동의 (필수)</p>
+            <div class="privacy-content">
+                제공받는 자 : 킹메이커<br>
+                이용 목적 : SNS 온라인 대행 운영 및 서비스 광고 및 마케팅<br>
+                수집 항목 : 성명/약국명/연락처<br>
+                보유 및 이용 기간 : 목적 달성 시까지 (관련 법령에 따라 보관 후 삭제)
+            </div>
+            <label class="checkbox-label">
+                <input type="checkbox" name="agreement_2" required>
+                <span>동의합니다</span>
+            </label>
+        </div>
+    </div>
+</div>
+
+            <button type="submit">할인 혜택 받고 신청하기</button>
+            <p class="form-footer">정보는 서비스 안내 및 상담 목적으로만 사용됩니다.</p>
         </form>
     </div>
 </div>
 
 <style>
-    .form-section { padding: 80px 20px; background: #f8fbfb; } /* 연한 민트빛 배경 */
+    /* 전체 배경 및 폰트 설정 */
+    .form-section { 
+        padding: 100px 20px; 
+        background-color: #f0f4f4; /* 연한 민트/그레이 톤 */
+        font-family: 'Pretendard', -apple-system, sans-serif;
+    }
+
     .form-card { 
-        max-width: 500px; margin: 0 auto; background: white; 
-        padding: 40px; border-radius: 20px; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+        max-width: 550px; 
+        margin: 0 auto; 
+        background: #ffffff; 
+        padding: 50px 40px; 
+        border-radius: 24px; 
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
     }
-    .benefit-tag { color: #00bfa5; font-weight: bold; margin-bottom: 30px; }
-    .input-group { text-align: left; margin-bottom: 20px; }
-    .input-group label { display: block; font-size: 14px; margin-bottom: 8px; color: #555; }
+
+    .form-header { margin-bottom: 40px; text-align: center; }
+    .form-header h2 { font-size: 28px; color: #1a1a1a; margin-bottom: 12px; }
+    .benefit-notice { 
+        display: inline-block;
+        background: #e0f2f1; 
+        color: #00796b; 
+        padding: 10px 20px; 
+        border-radius: 50px; 
+        font-size: 15px;
+    }
+
+    .input-group { text-align: left; margin-bottom: 24px; }
+    .input-group label { 
+        display: block; 
+        font-size: 15px; 
+        font-weight: 600; 
+        margin-bottom: 8px; 
+        color: #333; 
+    }
+
     input, textarea { 
-        width: 100%; padding: 12px; border: 1px solid #ddd; 
-        border-radius: 8px; box-sizing: border-box; font-size: 16px;
+        width: 100%; 
+        padding: 14px 16px; 
+        border: 1px solid #e0e0e0; 
+        border-radius: 12px; 
+        font-size: 16px; 
+        transition: all 0.2s;
+        background: #fafafa;
     }
-    textarea { height: 100px; resize: none; }
+
+    input:focus, textarea:focus { 
+        outline: none; 
+        border-color: #00bfa5; 
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(0, 191, 165, 0.1);
+    }
+
+    textarea { height: 120px; resize: vertical; }
+
     button { 
-        width: 100%; padding: 15px; background: #00bfa5; color: white; 
-        border: none; border-radius: 8px; font-size: 18px; font-weight: bold; 
-        cursor: pointer; transition: 0.3s;
+        width: 100%; 
+        padding: 18px; 
+        background: #00bfa5; /* 팜스타트 민트 포인트 */
+        color: white; 
+        border: none; 
+        border-radius: 12px; 
+        font-size: 18px; 
+        font-weight: bold; 
+        cursor: pointer; 
+        transition: 0.3s;
+        margin-top: 10px;
     }
-    button:hover { background: #008e7a; }
+
+    button:hover { 
+        background: #008e7a; 
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 191, 165, 0.3);
+    }
+
+    .form-footer { 
+        font-size: 13px; 
+        color: #999; 
+        margin-top: 20px; 
+        text-align: center; 
+    }
+
+    /* 모바일 대응 */
+    @media (max-width: 480px) {
+        .form-card { padding: 30px 20px; }
+        .form-header h2 { font-size: 24px; }
+    }
 </style>
         </div>
     </div>
